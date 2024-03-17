@@ -6,8 +6,37 @@
 
 body {
 	font-family: 'Montserrat', sans-serif;
-	background: #e0e0e0;
+	background: #f6cc58;
 	color: #1d1d1d;
+}
+.buscador{
+    width: 100%;
+    background-color: #000;
+    gap: 1.2rem;
+    padding: 4rem;
+    border-radius: 0px 0px 20px 20px;
+    display: flex;
+    justify-content:center;
+}
+button{
+    background-color: rgb(129, 236, 22);
+    border: none;
+    color: white;
+    padding: 15px 1.2rem;
+    border-radius: 5px;
+    &:hover{
+        cursor: pointer;
+        background-color: white;
+        color: black;
+        transition-duration: 500ms;
+    }
+}
+.buscador input {
+    background-color: white;
+    border: none;
+    border-radius: 5px;
+
+    padding: 2px;
 }
 
 .contenedor {
@@ -20,16 +49,28 @@ body {
 	gap: 2rem;
 }
 
-.contenedor .pelicula {
+.contenedor .personaje {
+    display: flex;
+    flex-direction: column;
 	text-align: center;
+    justify-content: center;
+    align-items: center;
+    background-color:azure;
+    padding: 10px;
+    border-radius: 10px;
+    &:hover{
+        transition-duration: 500ms, 500ms;
+        transition-property: background-color;
+        background-color: bisque;
+    }
 }
 
-.contenedor .pelicula .titulo {
+.contenedor .personaje .nombre {
 	font-size: 16px;
 	font-weight: 600;
 }
 
-.contenedor .pelicula .poster {
+.contenedor .personaje .imagen {
     max-width: 8rem;
 	margin-bottom: 10px;
 	border-radius: 15px;

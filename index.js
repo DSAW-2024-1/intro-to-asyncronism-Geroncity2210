@@ -1,12 +1,12 @@
 const characterInput = document.getElementById('charInput');
-let num = 15;
+let num = 9;
 let character = "";
 const numberInput= document.getElementById('numInput');
 const btnFetch = document.getElementById("btnFetch");
 
 btnFetch.addEventListener('click', () => {
     if(numberInput.value == ""){
-        num = 15;
+        num = 9;
     }else{
         num = numberInput.value;
     }
@@ -26,11 +26,10 @@ const cargarPersonajes = async() => {
 			let personajes = '';
 			datos.forEach(personaje => {
 				personajes += `
-					<div class="pelicula">
-                        <img class="poster" src="${personaje.image}">
-                        <h3 class="titulo">${personaje.character}</h3>
+					<div class="personaje">
+                        <img class="imagen" src="${personaje.image}">
+                        <h3 class="nombre">${personaje.character}</h3>
                         <p>"${personaje.quote}"</p>
-						
 					</div>
 				`;
 			});
