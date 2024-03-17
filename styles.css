@@ -1,0 +1,111 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Montserrat', sans-serif;
+	background: #f6cc58;
+}
+.buscador{
+    width: 100%;
+    background-color: #000;
+    gap: 1.2rem;
+    padding: 4rem;
+    border-radius: 0px 0px 20px 20px;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    h1{
+        font-size: 2rem;
+        color: #ffffff;
+    }
+}
+.buscador input {
+    background-color: white;
+    border: none;
+    border-radius: 5px;
+    outline:none;
+    padding: 15px;
+}
+button{
+    background-color: rgb(129, 236, 22);
+    border: none;
+    color: white;
+    padding: 15px 20px;
+    border-radius: 5px;
+    &:hover{
+        cursor: pointer;
+        background-color: white;
+        color: black;
+        transition-duration: 500ms;
+    }
+    &&:active{
+        background-color: black;
+        color: white;
+        border: solid 1px white;
+        transition-duration: 500ms;
+
+    }
+}
+
+.contenedor {
+	width: 90%;
+	max-width: 1000px;
+	margin: 40px auto 100px auto;
+
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 2rem;
+}
+
+.contenedor .personaje {
+    display: flex;
+    flex-direction: column;
+	text-align: center;
+    justify-content: center;
+    align-items: center;
+    background-color:azure;
+    padding: 10px;
+    border-radius: 10px;
+    &:hover{
+        transition-duration: 500ms, 500ms;
+        transition-property: background-color;
+        background-color: bisque;
+    }
+}
+
+.contenedor .personaje .nombre {
+	font-size: 16px;
+	font-weight: 600;
+}
+
+.contenedor .personaje .imagen {
+    max-width: 8rem;
+	margin-bottom: 10px;
+	border-radius: 15px;
+}
+
+@media screen and (max-width:600px) {
+    .buscador{
+        width: 100%;
+        height: 250px;
+        display: flex;
+        flex-direction:column;
+        border-radius: 0px 0px 30px 30px;
+        input{
+            padding: 10px 10px;
+        }
+        button{
+            padding: 15px 50px;
+        }
+
+
+    }
+    .contenedor{
+        grid-template-columns: repeat(1, 1fr);
+        min-height: 8rem;
+
+    }
+}
